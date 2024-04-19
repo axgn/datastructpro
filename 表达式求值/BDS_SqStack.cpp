@@ -35,7 +35,7 @@ Status StackEmpty(SqStack S)
 
 int StackLength(SqStack S)
 {
-	return S.top - S.base;
+	return int(S.top - S.base);
 }
 
 SElemType GetTop(SqStack S)
@@ -107,7 +107,7 @@ Status StackEmpty(SqStack_int S)
 
 int StackLength(SqStack_int S)
 {
-	return S.top - S.base;
+	return int(S.top - S.base);
 }
 
 SElemType_int GetTop(SqStack_int S)

@@ -21,6 +21,7 @@ char Precede(char op, char c)
 	case 1:  return '>';
 	case 2:  return '<';
 	case 3:  return '=';
+	default: return 0;
 	}
 }
 
@@ -31,6 +32,7 @@ int Operate(int a, char theta, int b)
 	case '-':return a - b;
 	case '*':return a * b;
 	case '/':return a / b;
+	default:return 0;
 	}
 }
 
