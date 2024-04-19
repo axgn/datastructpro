@@ -76,6 +76,10 @@ int EvaluateExpression()
 				Pop(OPTR, theta);
 				Pop(OPND, b); 
 				Pop(OPND, a);
+				if (theta=='/'&&b==0)
+				{
+					return ERROR;
+				}
 				Push(OPND, Operate(a, theta, b));
 				break;
 			}
