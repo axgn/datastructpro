@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
+    <ClInclude Include="BDS.h" />
+    <ClInclude Include="SqStack_cpp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BDS.cpp" />
+    <ClCompile Include="BDS_main.cpp" />
+    <ClCompile Include="BDS_SqStack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

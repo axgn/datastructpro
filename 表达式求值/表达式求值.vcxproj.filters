@@ -15,7 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClInclude Include="BDS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SqStack_cpp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BDS.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BDS_main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BDS_SqStack.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
