@@ -24,7 +24,7 @@ char Precede(char op, char c)
 	}
 }
 
-char Operate(int a, char theta, int b)
+int Operate(int a, char theta, int b)
 {
 	switch (theta) {
 	case '+':return a + b;
@@ -34,12 +34,12 @@ char Operate(int a, char theta, int b)
 	}
 }
 
-char EvaluateExpression()
+int EvaluateExpression()
 {
 	SqStack_int OPND;
 	SqStack OPTR;
-	char c, x, theta;
-	int a, b;
+	char c,  theta;
+	int a, b,x;
 	InitStack(OPTR);  Push(OPTR, '#');
 	InitStack(OPND);
 	c = getchar(); 
@@ -58,7 +58,7 @@ char EvaluateExpression()
 				}
 				c = getchar();
 			}
-			Push(OPND, c);
+			Push(OPND, num);
 		}
 		else {
 			switch (Precede(GetTop(OPTR), c)) {
@@ -67,7 +67,7 @@ char EvaluateExpression()
 				c = getchar();  
 				break;
 			case '=':
-				Pop(OPTR, x);
+				Pop(OPND, x);
 				c = getchar(); 
 				break;
 			case '>':

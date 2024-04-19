@@ -21,8 +21,8 @@ int In(char c, const char* op);
 
 char Precede(char op, char c);
 
-char Operate(int a, char theta, int  b);
+int Operate(int a, char theta, int  b);
 
-char EvaluateExpression();
+int EvaluateExpression();
 
 
