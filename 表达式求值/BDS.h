@@ -1,3 +1,7 @@
+#ifndef __BDS_H__
+
+#define __BDS_H__
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
@@ -26,3 +30,4 @@ int Operate(int a, char theta, int  b);
 int EvaluateExpression();
 
 
+#endif

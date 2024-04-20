@@ -1,3 +1,8 @@
+#ifndef __SQSTACK_CPP_H__
+
+#define __SQSTACK_CPP_H__
+
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -6,7 +11,7 @@
 #define FALSE 0
 #define OK 1
 #define EQUAL 1
-#define OVERFLOW -1
+#define MY_OVERFLOW -1
 #define STACK_INIT_SIZE 100
 #define STACKINCREMENT 10
 
@@ -66,3 +71,5 @@ Status Push(SqStack_int& S, SElemType_int e);
 Status Pop(SqStack_int& S, SElemType_int& e);
 
 void StackTraverse(SqStack_int S);
+
+#endif
