@@ -40,13 +40,14 @@ int EvaluateExpression()
 {
 	SqStack_int OPND;
 	SqStack OPTR;
-	char c,  theta;
-	int a, b,x;
-	InitStack(OPTR);  Push(OPTR, '#');
+	char c,theta,o;
+	int a,b,x;
+	InitStack(OPTR);  
+	Push(OPTR, '#');
 	InitStack(OPND);
 	c = getchar(); 
 	while (c != '#' || GetTop(OPTR) != '#') {
-		if (!In(c, OP)) {
+    		if (!In(c, OP)) {
 			bool fir = true;
 			int num = c - '0';
 			while (c >= '0' && c <= '9')
@@ -69,7 +70,7 @@ int EvaluateExpression()
 				c = getchar();  
 				break;
 			case '=':
-				Pop(OPND, x);
+				Pop(OPTR, o);
 				c = getchar(); 
 				break;
 			case '>':
