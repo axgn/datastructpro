@@ -75,7 +75,7 @@ int evaluate(const string& s,int& status) {
 			op.push('('); 
 		}
 		else if (s[i] == ')') {  
-			while (op.top() != '(') {
+			while (!op.empty() && op.top() != '(') {
 				if (process_op(st, op.top()))
 				{
 					cout << "There was an error in the calculation" << "\n";
@@ -83,7 +83,15 @@ int evaluate(const string& s,int& status) {
 				}
 				op.pop();  
 			}
-			op.pop();               
+			if (!op.empty())
+			{
+				op.pop();
+			}
+			else
+			{
+				status = -1;
+				return -1;
+			}
 		}
 		else if (map.find(s[i]) != map.end()) {
 			char cur_op = s[i];
@@ -107,7 +115,7 @@ int evaluate(const string& s,int& status) {
 	}
 
 	while (!op.empty()) {
-		if (process_op(st, op.top()))
+		if (st.size() < 2 || process_op(st, op.top()))
 		{
 			cout << "There was an error in the calculation" << "\n";
 			status = -1;
@@ -115,7 +123,15 @@ int evaluate(const string& s,int& status) {
 		}
 		op.pop();
 	}
-	return st.top();
+	if (!st.empty())
+	{
+		return st.top();
+	}
+	else
+	{
+		status = -1;
+		return -1;
+	}
 }
 
 bool check(const string& s)
