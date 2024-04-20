@@ -1,4 +1,3 @@
-#include<iostream>
 #include<string>
 #include<stack>
 #include<unordered_map>
@@ -65,7 +64,7 @@ int process_op(stack<int>& st, char op) // 用于计算后缀表达式
 	}
 }
 
-int evaluate(const string& s,int& status) { 
+int evaluate(const string& s) { 
 	stack<int> st;
 	stack<char> op;
 	for (int i = 0; i < (int)s.size(); i++) {
@@ -110,7 +109,6 @@ int evaluate(const string& s,int& status) {
 		if (process_op(st, op.top()))
 		{
 			cout << "There was an error in the calculation" << "\n";
-			status = -1;
 			return -1;
 		}
 		op.pop();

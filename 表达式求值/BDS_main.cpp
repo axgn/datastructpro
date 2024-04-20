@@ -9,7 +9,7 @@ int main()
 	if (choose == 1)
 	{
 		int ignore;
-		ignore =  getchar();
+		ignore = getchar();
 		int i = 0;
 		printf("Only within Positive integer evaluation,input a expression end with symbol #:(7+(3+8)*5#)\n");
 		i = EvaluateExpression();
@@ -30,9 +30,11 @@ int main()
 		printf("Only within Positive integer evaluation:(7+(3+8)*5)\n");
 		std::string s;
 		std::getline(std::cin, s);
-		if (check(s))
+		int status = 0;
+		int temp = evaluate(s, status);
+		if (check(s) && status == 0)
 		{
-			printf("This expression's result is:%d", evaluate(s));
+			printf("This expression's result is:%d", temp);
 		}
 		else
 		{
