@@ -25,6 +25,9 @@ int main()
 	}
 	else if(choose == 2)
 	{
+		int ignore;
+		ignore = getchar();
+		printf("Only within Positive integer evaluation:(7+(3+8)*5)\n");
 		std::string s;
 		std::getline(std::cin, s);
 		if (check(s))
