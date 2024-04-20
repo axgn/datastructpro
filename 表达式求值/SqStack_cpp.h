@@ -21,20 +21,20 @@ typedef char SElemType;
 
 typedef int SElemType_int;
 
+// 定义栈的结构体
 typedef struct
 {
-	SElemType* base;
-	SElemType* top;
-	int stacksize;
-}SqStack;
+    SElemType* base; // 栈底指针
+    SElemType* top;  // 栈顶指针
+    int stacksize;   // 栈的容量
+} SqStack;           // 操作符栈
 
 typedef struct
 {
-	SElemType_int* base;
-	SElemType_int* top;
-	int stacksize;
-}SqStack_int;
-
+    SElemType_int* base; // 栈底指针
+    SElemType_int* top;  // 栈顶指针
+    int stacksize;       // 栈的容量
+} SqStack_int;           // 操作符栈
 
 Status InitStack(SqStack& S);
 
