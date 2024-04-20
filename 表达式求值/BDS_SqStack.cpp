@@ -4,7 +4,7 @@
 Status InitStack(SqStack& S)
 {
 	S.base = (SElemType*)malloc(STACK_INIT_SIZE * sizeof(SElemType));
-	if (!S.base) exit(OVERFLOW);
+	if (!S.base) exit(MY_OVERFLOW);
 	S.top = S.base;
 	S.stacksize = STACK_INIT_SIZE;
 	return OK;
@@ -40,7 +40,7 @@ int StackLength(SqStack S)
 
 SElemType GetTop(SqStack S)
 {
-	if (S.top == S.base) exit(OVERFLOW);
+	if (S.top == S.base) exit(MY_OVERFLOW);
 	return *(S.top - 1);
 }
 
@@ -48,7 +48,7 @@ Status Push(SqStack& S, SElemType e)
 {
 	if (S.top - S.base >= S.stacksize) {
 		S.base = (SElemType*)realloc(S.base, (S.stacksize + STACKINCREMENT) * sizeof(SElemType));
-		if (!S.base) exit(OVERFLOW);
+		if (!S.base) exit(MY_OVERFLOW);
 		S.top = S.base + S.stacksize;
 		S.stacksize += STACKINCREMENT;
 	}
@@ -76,7 +76,7 @@ void StackTraverse(SqStack S) {
 Status InitStack(SqStack_int& S)
 {
 	S.base = (SElemType_int*)malloc(STACK_INIT_SIZE * sizeof(SElemType_int));
-	if (!S.base) exit(OVERFLOW);
+	if (!S.base) exit(MY_OVERFLOW);
 	S.top = S.base;
 	S.stacksize = STACK_INIT_SIZE;
 	return OK;
@@ -112,7 +112,7 @@ int StackLength(SqStack_int S)
 
 SElemType_int GetTop(SqStack_int S)
 {
-	if (S.top == S.base) exit(OVERFLOW);
+	if (S.top == S.base) exit(MY_OVERFLOW);
 	return *(S.top - 1);
 }
 
@@ -120,7 +120,7 @@ Status Push(SqStack_int& S, SElemType_int e)
 {
 	if (S.top - S.base >= S.stacksize) {
 		S.base = (SElemType_int*)realloc(S.base, (S.stacksize + STACKINCREMENT) * sizeof(SElemType_int));
-		if (!S.base) exit(OVERFLOW);
+		if (!S.base) exit(MY_OVERFLOW);
 		S.top = S.base + S.stacksize;
 		S.stacksize += STACKINCREMENT;
 	}
