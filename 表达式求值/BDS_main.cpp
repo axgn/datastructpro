@@ -1,5 +1,5 @@
-#include"BDS.h"
-#include "second_solu.h"
+#include"BDS_1.h"
+#include "BDS_2.h"
 #include <iostream>
 int main()
 {

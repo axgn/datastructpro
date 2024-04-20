@@ -130,15 +130,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="BDS.h" />
-    <ClInclude Include="second_solu.h" />
+    <ClInclude Include="BDS_1.h" />
+    <ClInclude Include="BDS_2.h" />
     <ClInclude Include="SqStack_cpp.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BDS.cpp" />
+    <ClCompile Include="BDS_1.cpp" />
     <ClCompile Include="BDS_main.cpp" />
     <ClCompile Include="BDS_SqStack.cpp" />
-    <ClCompile Include="second_solution.cpp" />
+    <ClCompile Include="BDS_2.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
